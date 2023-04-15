@@ -9,16 +9,10 @@ class Graph extends React.Component {
         <Vertice/> 
         <Vertice id="2"/> 
         <Vertice/> 
+        <Vertice/> 
         <Vertice/>
-        <Vertice id = 'warning'/>
         </div>);
     }
 }
-function addVertice(props) {
-    return (
-      <div>
-      <Vertice/>
-      </div>
-    );
-}
+
 export default Graph;
