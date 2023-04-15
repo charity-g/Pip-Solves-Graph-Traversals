@@ -1,4 +1,7 @@
+import {useState} from "react";
+
 function Desc() {
+    const [name, setName] = useState("Challenger");
     return (
       <div>
         <h1>Pip Solves: Graph Traversals</h1>
@@ -7,9 +10,15 @@ function Desc() {
         <a href="https://github.com/charity-g">GitHub</a>
         </p>
         </div>
+        <form>
+        <label for="name-field">Name: </label>
+        <input value={name}></input>
+        </form>
       </div>
     );
   }
+
+
 
   export default Desc;
   
