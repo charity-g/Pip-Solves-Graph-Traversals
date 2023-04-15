@@ -1,27 +1,38 @@
 import logo from './logo.svg';
 import Desc from './Desc.js';
 import Graph from "./Graph.js";
+import {useState} from "react";
 import './App.css';
 
 function App() {
   return (
     <div className="App">
         <Desc/>
-        <Score score="2"/>
+        <ScoreState/>
+        <br></br>
         <Graph/>
     </div>
   );
 }
 
+function ScoreState() {
+  const [score, setScore] = useState(0);
 
-function Score(props) {
-  const val = props.score;
+  const updateScore = () => {
+    setScore(score+1);
+  }
+
   return (
     <div>
-    <p>Score: {val}</p>
+    
+    <p>Score: {score}</p>
+    <button onClick={updateScore}>
+     Update Score
+    </button>
     </div>
-  ); 
+    );
 }
+
 
 
 export default App;

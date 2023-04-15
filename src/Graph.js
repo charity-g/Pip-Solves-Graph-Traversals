@@ -7,9 +7,10 @@ class Graph extends React.Component {
         const i = 0;
         return (<div> 
         <Vertice/> 
-        <Vertice/> 
+        <Vertice id="2"/> 
         <Vertice/> 
         <Vertice/>
+        <Vertice id = 'warning'/>
         </div>);
     }
 }
